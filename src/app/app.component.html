@@ -4,7 +4,10 @@
     I bet you were disappointed when you saw there wasn't any money inside! Try
     not to spend it all in one place! Hahaha!
   </h3>
-  <section *ngIf="isKeypadLocked" [ngClass]="!isKeypadBeingUnlocked ? 'keypad' : 'keypad unlocking'">
+  <section
+    *ngIf="isKeypadLocked; else decoderContainer"
+    [ngClass]="!isKeypadBeingUnlocked ? 'keypad' : 'keypad unlocking'"
+  >
     <div
       class="combo-div"
       *ngIf="currentComboAttempt.length > 0; else fillerDiv"
@@ -85,10 +88,7 @@
           alt="music-div"
         />
       </div>
-      <div
-        class="music-div"
-        id="clear-button-div"
-      >
+      <div class="music-div" id="clear-button-div">
         <button (click)="clearCombo()">Clear</button>
       </div>
       <div (click)="addSymbolToCombo(0)" class="music-div">
@@ -98,16 +98,15 @@
           alt="music-div"
         />
       </div>
-      <div
-        class="music-div"
-        id="submit-button-div"
-      >
+      <div class="music-div" id="submit-button-div">
         <button (click)="submitCombo()">Submit</button>
       </div>
     </section>
   </section>
 
-  <section *ngIf="!isKeypadLocked" class="decoder-container">
-    I should only show if code is correct! Here are all the symbols decoded!
-  </section>
+  <ng-template #decoderContainer>
+    <section class="decoder-container">
+      I should only show if code is correct! Here are all the symbols decoded!
+    </section>
+  </ng-template>
 </div>
