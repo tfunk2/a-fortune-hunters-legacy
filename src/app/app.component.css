@@ -1,0 +1,53 @@
+.current-combo-attempt {
+  color: black;
+  font-size: 8vw;
+  margin: 0px;
+  letter-spacing: 15px;
+}
+
+.dot-symbol {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: gray;
+  border: red 2px solid;
+  font-size: 2vw;
+}
+
+.symbols-container {
+  display: grid;
+  grid-template-columns: 10vw 10vw 10vw;
+  grid-template-rows: 10vw 10vw 10vw 10vw;
+  column-gap: 15px;
+  row-gap: 15px;
+  margin: 10px;
+  width: fit-content;
+}
+
+.keypad {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.combo-div,
+.filler-div {
+  width: calc(30vw + 34px);
+  height: 100px;
+  background: red;
+  transform: translate(2px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  margin-top: 15px;
+}
+
+#zero-button {
+  grid-column-start: 2;
+}
