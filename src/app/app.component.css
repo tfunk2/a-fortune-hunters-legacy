@@ -26,7 +26,11 @@
   height: 100%;
   background-color: gray;
   border: red 4px solid;
+  border-radius: 100pt;
+  box-shadow: 0 0 10px red;
   font-size: 2vw;
+  background-image: url("../assets/other-images/silver-brushed-metal-button.jpg");
+  background-size: contain;
 }
 
 .music-div:hover {
@@ -34,7 +38,7 @@
 }
 
 .music-note-img {
-  width: 60%;
+  width: 45%;
   height: auto;
 }
 
@@ -57,6 +61,8 @@
 
 .unlocking > .symbols-container > .music-div {
   border: green 4px solid;
+  box-shadow: 0 0 10px green;
+
 }
 
 .unlocking > .combo-div, .unlocking > .filler-div {
@@ -72,6 +78,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 8pt;
 }
 
 button {
