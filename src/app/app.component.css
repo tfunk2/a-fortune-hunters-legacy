@@ -91,3 +91,21 @@ button {
   color: black;
   font-size: clamp(30pt, 8vw, 48pt);
 }
+
+.decoder-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.paper-container {
+  width: clamp(100%, 90%, 80%);
+  height: auto;
+
+}
+
+.old-paper-img {
+  width: 100%;
+  height: auto;
+}
