@@ -4,7 +4,7 @@
     I bet you were disappointed when you saw there wasn't any money inside! Try
     not to spend it all in one place! Hahaha!
   </h3>
-  <section *ngIf="isKeypadLocked" class="keypad">
+  <section *ngIf="isKeypadLocked" [ngClass]="!isKeypadBeingUnlocked ? 'keypad' : 'keypad unlocking'">
     <div
       class="combo-div"
       *ngIf="currentComboAttempt.length > 0; else fillerDiv"
@@ -17,7 +17,9 @@
       />
     </div>
     <ng-template #fillerDiv>
-      <div class="filler-div"></div>
+      <div class="filler-div">
+        <h2 class="open-text" *ngIf="isKeypadBeingUnlocked">OPEN</h2>
+      </div>
     </ng-template>
     <section class="symbols-container">
       <div (click)="addSymbolToCombo(1)" class="music-div">
@@ -83,15 +85,26 @@
           alt="music-div"
         />
       </div>
-      <div (click)="addSymbolToCombo(0)" class="music-div" id="zero-button">
+      <div
+        class="music-div"
+        id="clear-button-div"
+      >
+        <button (click)="clearCombo()">Clear</button>
+      </div>
+      <div (click)="addSymbolToCombo(0)" class="music-div">
         <img
           class="music-note-img"
           src="../assets/music-note-pngs/treble-clef.png"
           alt="music-div"
         />
       </div>
+      <div
+        class="music-div"
+        id="submit-button-div"
+      >
+        <button (click)="submitCombo()">Submit</button>
+      </div>
     </section>
-    <button (click)="submitCombo()">Submit</button>
   </section>
 
   <section *ngIf="!isKeypadLocked" class="decoder-container">

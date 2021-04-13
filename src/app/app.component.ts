@@ -8,7 +8,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title: string = "A Fortune Hunter's Legacy";
   isKeypadLocked: boolean = true;
-  correctCombination: number[] = [2, 4, 3, 6];
+  isKeypadBeingUnlocked: boolean = false;
+  correctCombination: number[] = [0, 7, 4, 2];
   currentComboAttempt: number[] = [];
 
   addSymbolToCombo(num) {
@@ -17,9 +18,20 @@ export class AppComponent {
     }
   }
 
-  submitCombo() {
+  clearCombo() {
+    this.currentComboAttempt = []
+  }
+
+ submitCombo() {
     if(this.currentComboAttempt.join("") === this.correctCombination.join("")) {
-      this.isKeypadLocked = false;
+      this.isKeypadBeingUnlocked = true;
+      this.currentComboAttempt = [];
+      setTimeout(() => {
+        
+      }, 1000);
+      setTimeout(() => {
+        this.isKeypadLocked = false;
+      }, 2000);
     } else {
       this.currentComboAttempt = [];
     }

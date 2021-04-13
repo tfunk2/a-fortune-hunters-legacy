@@ -25,7 +25,7 @@
   width: 100%;
   height: 100%;
   background-color: gray;
-  border: red 2px solid;
+  border: red 4px solid;
   font-size: 2vw;
 }
 
@@ -55,21 +55,39 @@
     align-items: center;
 }
 
+.unlocking > .symbols-container > .music-div {
+  border: green 4px solid;
+}
+
+.unlocking > .combo-div, .unlocking > .filler-div {
+  background-color: green;
+}
+
 .combo-div,
 .filler-div {
-  width: clamp(274px, calc(30vw + 34px), 424px);
+  width: clamp(278px, calc(30vw + 34px), 428px);
   height: clamp(84px, 10vw, 134px);
-  background: red;
-  transform: translate(2px);
+  background-color: red;
+  transform: translate(4px);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 button {
-  margin-top: 15px;
+  visibility: visible;
 }
 
-#zero-button {
-  grid-column-start: 2;
+#clear-button-div, #submit-button-div {
+  visibility: hidden;
+}
+
+#submit-button-div {
+  padding: 5px 10px;
+
+}
+
+.open-text {
+  color: black;
+  font-size: clamp(30pt, 8vw, 48pt);
 }
