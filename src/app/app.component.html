@@ -5,51 +5,96 @@
     not to spend it all in one place! Hahaha!
   </h3>
   <section *ngIf="isKeypadLocked" class="keypad">
-    <div class="combo-div" *ngIf="currentComboAttempt.length > 0; else fillerDiv">
-      <h2 class="current-combo-attempt">
-        {{ currentComboAttempt.join("") }}
-      </h2>
+    <div
+      class="combo-div"
+      *ngIf="currentComboAttempt.length > 0; else fillerDiv"
+    >
+      <img
+        *ngFor="let currentNum of currentComboAttempt"
+        class="current-combo-attempt"
+        [src]="whichMusicNote(currentNum)"
+        alt="keypad music note symbols"
+      />
     </div>
     <ng-template #fillerDiv>
       <div class="filler-div"></div>
     </ng-template>
     <section class="symbols-container">
       <div (click)="addSymbolToCombo(1)" class="music-div">
-        <img class="music-note-img" src="../assets/music-note-pngs/bass-clef.png" alt="music-div">
+        <img
+          class="music-note-img"
+          src="../assets/music-note-pngs/bass-clef.png"
+          alt="music-div"
+        />
       </div>
       <div (click)="addSymbolToCombo(2)" class="music-div">
-        <img class="music-note-img" src="../assets/music-note-pngs/beam.png" alt="music-div">
+        <img
+          class="music-note-img"
+          src="../assets/music-note-pngs/beam.png"
+          alt="music-div"
+        />
       </div>
       <div (click)="addSymbolToCombo(3)" class="music-div">
-        <img class="music-note-img" src="../assets/music-note-pngs/eighth-note.png" alt="music-div">
+        <img
+          class="music-note-img"
+          src="../assets/music-note-pngs/eighth-note.png"
+          alt="music-div"
+        />
       </div>
       <div (click)="addSymbolToCombo(4)" class="music-div">
-        <img class="music-note-img" src="../assets/music-note-pngs/half-note.png" alt="music-div">
+        <img
+          class="music-note-img"
+          src="../assets/music-note-pngs/half-note.png"
+          alt="music-div"
+        />
       </div>
       <div (click)="addSymbolToCombo(5)" class="music-div">
-        <img class="music-note-img" src="../assets/music-note-pngs/quarter-note-rest.png" alt="music-div">
+        <img
+          class="music-note-img"
+          src="../assets/music-note-pngs/quarter-note-rest.png"
+          alt="music-div"
+        />
       </div>
       <div (click)="addSymbolToCombo(6)" class="music-div">
-        <img class="music-note-img" src="../assets/music-note-pngs/quaver.png" alt="music-div">
+        <img
+          class="music-note-img"
+          src="../assets/music-note-pngs/quaver.png"
+          alt="music-div"
+        />
       </div>
       <div (click)="addSymbolToCombo(7)" class="music-div">
-        <img class="music-note-img" src="../assets/music-note-pngs/sixteenth-note.png" alt="music-div">
+        <img
+          class="music-note-img"
+          src="../assets/music-note-pngs/sixteenth-note.png"
+          alt="music-div"
+        />
       </div>
       <div (click)="addSymbolToCombo(8)" class="music-div">
-        <img class="music-note-img" src="../assets/music-note-pngs/tie.png" alt="music-div">
+        <img
+          class="music-note-img"
+          src="../assets/music-note-pngs/tie.png"
+          alt="music-div"
+        />
       </div>
       <div (click)="addSymbolToCombo(9)" class="music-div">
-        <img class="music-note-img" src="../assets/music-note-pngs/triplet.png" alt="music-div">
+        <img
+          class="music-note-img"
+          src="../assets/music-note-pngs/triplet.png"
+          alt="music-div"
+        />
       </div>
       <div (click)="addSymbolToCombo(0)" class="music-div" id="zero-button">
-        <img class="music-note-img" src="../assets/music-note-pngs/treble-clef.png" alt="music-div">
+        <img
+          class="music-note-img"
+          src="../assets/music-note-pngs/treble-clef.png"
+          alt="music-div"
+        />
       </div>
     </section>
     <button (click)="submitCombo()">Submit</button>
   </section>
 
   <section *ngIf="!isKeypadLocked" class="decoder-container">
-    I should only show if code is correct!
-    Here are all the symbols decoded!
+    I should only show if code is correct! Here are all the symbols decoded!
   </section>
 </div>

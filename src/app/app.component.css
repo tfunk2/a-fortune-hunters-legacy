@@ -14,9 +14,8 @@
 
 .current-combo-attempt {
   color: black;
-  font-size: 8vw;
-  margin: 0px;
-  letter-spacing: 15px;
+  width: 18%;
+  margin: clamp(5px, 10px, 15px);
 }
 
 .music-div {
@@ -59,7 +58,7 @@
 .combo-div,
 .filler-div {
   width: clamp(274px, calc(30vw + 34px), 424px);
-  height: 100px;
+  height: clamp(84px, 10vw, 134px);
   background: red;
   transform: translate(2px);
   display: flex;
