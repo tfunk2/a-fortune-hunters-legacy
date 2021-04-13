@@ -1,3 +1,17 @@
+.app-container {
+  font-family: 'Architects Daughter', cursive;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.title {
+  line-height: 1;
+  margin-bottom: 0px;
+}
+
 .current-combo-attempt {
   color: black;
   font-size: 8vw;
@@ -5,7 +19,7 @@
   letter-spacing: 15px;
 }
 
-.dot-symbol {
+.music-div {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,10 +30,19 @@
   font-size: 2vw;
 }
 
+.music-div:hover {
+    cursor: pointer;
+}
+
+.music-note-img {
+  width: 60%;
+  height: auto;
+}
+
 .symbols-container {
   display: grid;
-  grid-template-columns: 10vw 10vw 10vw;
-  grid-template-rows: 10vw 10vw 10vw 10vw;
+  grid-template-columns: clamp(80px, 10vw, 130px) clamp(80px, 10vw, 130px) clamp(80px, 10vw, 130px);
+  grid-template-rows: clamp(80px, 10vw, 130px) clamp(80px, 10vw, 130px) clamp(80px, 10vw, 130px) clamp(80px, 10vw, 130px);
   column-gap: 15px;
   row-gap: 15px;
   margin: 10px;
@@ -35,7 +58,7 @@
 
 .combo-div,
 .filler-div {
-  width: calc(30vw + 34px);
+  width: clamp(274px, calc(30vw + 34px), 424px);
   height: 100px;
   background: red;
   transform: translate(2px);

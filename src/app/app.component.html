@@ -1,5 +1,5 @@
 <div class="app-container">
-  <h1>{{ title }}</h1>
+  <h1 class="title">{{ title }}</h1>
   <h3>
     I bet you were disappointed when you saw there wasn't any money inside! Try
     not to spend it all in one place! Hahaha!
@@ -14,16 +14,36 @@
       <div class="filler-div"></div>
     </ng-template>
     <section class="symbols-container">
-      <div (click)="addSymbolToCombo(1)" class="dot-symbol">Symbol 1</div>
-      <div (click)="addSymbolToCombo(2)" class="dot-symbol">Symbol 2</div>
-      <div (click)="addSymbolToCombo(3)" class="dot-symbol">Symbol 3</div>
-      <div (click)="addSymbolToCombo(4)" class="dot-symbol">Symbol 4</div>
-      <div (click)="addSymbolToCombo(5)" class="dot-symbol">Symbol 5</div>
-      <div (click)="addSymbolToCombo(6)" class="dot-symbol">Symbol 6</div>
-      <div (click)="addSymbolToCombo(7)" class="dot-symbol">Symbol 7</div>
-      <div (click)="addSymbolToCombo(8)" class="dot-symbol">Symbol 8</div>
-      <div (click)="addSymbolToCombo(9)" class="dot-symbol">Symbol 9</div>
-      <div (click)="addSymbolToCombo(0)" class="dot-symbol" id="zero-button">Symbol 0</div>
+      <div (click)="addSymbolToCombo(1)" class="music-div">
+        <img class="music-note-img" src="../assets/music-note-pngs/bass-clef.png" alt="music-div">
+      </div>
+      <div (click)="addSymbolToCombo(2)" class="music-div">
+        <img class="music-note-img" src="../assets/music-note-pngs/beam.png" alt="music-div">
+      </div>
+      <div (click)="addSymbolToCombo(3)" class="music-div">
+        <img class="music-note-img" src="../assets/music-note-pngs/eighth-note.png" alt="music-div">
+      </div>
+      <div (click)="addSymbolToCombo(4)" class="music-div">
+        <img class="music-note-img" src="../assets/music-note-pngs/half-note.png" alt="music-div">
+      </div>
+      <div (click)="addSymbolToCombo(5)" class="music-div">
+        <img class="music-note-img" src="../assets/music-note-pngs/quarter-note-rest.png" alt="music-div">
+      </div>
+      <div (click)="addSymbolToCombo(6)" class="music-div">
+        <img class="music-note-img" src="../assets/music-note-pngs/quaver.png" alt="music-div">
+      </div>
+      <div (click)="addSymbolToCombo(7)" class="music-div">
+        <img class="music-note-img" src="../assets/music-note-pngs/sixteenth-note.png" alt="music-div">
+      </div>
+      <div (click)="addSymbolToCombo(8)" class="music-div">
+        <img class="music-note-img" src="../assets/music-note-pngs/tie.png" alt="music-div">
+      </div>
+      <div (click)="addSymbolToCombo(9)" class="music-div">
+        <img class="music-note-img" src="../assets/music-note-pngs/triplet.png" alt="music-div">
+      </div>
+      <div (click)="addSymbolToCombo(0)" class="music-div" id="zero-button">
+        <img class="music-note-img" src="../assets/music-note-pngs/treble-clef.png" alt="music-div">
+      </div>
     </section>
     <button (click)="submitCombo()">Submit</button>
   </section>
