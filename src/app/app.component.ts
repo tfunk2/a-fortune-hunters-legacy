@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title: string = "A Fortune Hunter's Legacy";
+  title: string = "The Legacy Continues...";
   isKeypadLocked: boolean = true;
   isKeypadBeingUnlocked: boolean = false;
   correctCombination: number[] = [0, 7, 4, 2];

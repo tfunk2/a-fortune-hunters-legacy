@@ -1,9 +1,11 @@
 <div class="app-container">
-  <h1 class="title">{{ title }}</h1>
-  <h3>
-    I bet you were disappointed when you saw there wasn't any money inside! Try
-    not to spend it all in one place! Hahaha!
-  </h3>
+  <header>
+    <h1 class="title">{{ title }}</h1>
+    <h3>
+      You must be able to prove your musicality in order to be worthy of the
+      inheritance I have in store for you.
+    </h3>
+  </header>
   <section
     *ngIf="isKeypadLocked; else decoderContainer"
     [ngClass]="!isKeypadBeingUnlocked ? 'keypad' : 'keypad unlocking'"
@@ -106,7 +108,7 @@
 
   <ng-template #decoderContainer>
     <section class="decoder-container">
-      I should only show if code is correct! Here are all the symbols decoded!
+      I knew you were a natural!
       <div class="paper-container">
         <img
           class="old-paper-img"
