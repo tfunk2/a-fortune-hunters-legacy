@@ -38,7 +38,9 @@ header {
 }
 
 .music-div:hover {
-    cursor: pointer;
+  cursor: pointer;
+  border: rgb(230, 230, 230) 4px solid;
+  box-shadow: 0 0 16px rgb(230, 230, 230);
 }
 
 .music-note-img {
@@ -47,9 +49,9 @@ header {
 }
 
 .symbols-container {
-  display: grid;
-  grid-template-columns: clamp(80px, 10vw, 130px) clamp(80px, 10vw, 130px) clamp(80px, 10vw, 130px);
-  grid-template-rows: clamp(80px, 10vw, 130px) clamp(80px, 10vw, 130px) clamp(80px, 10vw, 130px) clamp(80px, 10vw, 130px);
+  display: inline-grid;
+  grid-template-columns: clamp(80px, 8vw, 130px) clamp(80px, 8vw, 130px) clamp(80px, 8vw, 130px);
+  grid-template-rows: clamp(80px, 8vw, 130px) clamp(80px, 8vw, 130px) clamp(80px, 8vw, 130px) clamp(80px, 8vw, 130px);
   column-gap: 15px;
   row-gap: 15px;
   margin: 10px;
@@ -57,10 +59,10 @@ header {
 }
 
 .keypad {
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .unlocking > .symbols-container > .music-div {
@@ -89,7 +91,24 @@ header {
 
 button {
   visibility: visible;
-  padding: 5px 10px;
+  padding: 10px 15px;
+  background-color: rgb(39, 39, 39);
+  color: white;
+  width: 100%;
+  height: 80%;
+  border-radius: 100pt;
+  font-size: clamp(12pt, 1.5vw, 2vw);
+  font-family: 'Architects Daughter', cursive;
+  text-align: center;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: rgb(27, 27, 27);
+}
+
+button:focus {
+  outline: none;
 }
 
 #clear-button-div, #submit-button-div {
