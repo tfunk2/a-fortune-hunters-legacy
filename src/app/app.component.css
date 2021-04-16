@@ -20,7 +20,7 @@ header {
 
 header h3 {
   margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   font-size: clamp(12pt, 2vw, 15pt);
 }
 
@@ -139,6 +139,7 @@ button:focus {
   justify-content: center;
   color: green;
   font-size: clamp(18pt, 5vw, 4vw);
+  line-height: 1;
 }
 
 .paper-container {
