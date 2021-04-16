@@ -133,9 +133,10 @@ button:focus {
 }
 
 .decoder-container {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; */
+  display: grid;
   justify-content: center;
   color: green;
   font-size: clamp(18pt, 5vw, 4vw);
