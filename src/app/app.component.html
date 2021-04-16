@@ -110,6 +110,12 @@
     <section class="decoder-container">
       I knew you were a natural!
       <div class="paper-container">
+        <div class="alienese-div">
+          <div *ngFor="let alieneseImagePath of alieneseImagePaths" class="letter-div">
+            <img [src]="alieneseImagePath" alt="alien letter" class="alienese-letter">
+            <p>= {{ whichLetter(alieneseImagePath).toUpperCase() }}</p>
+          </div>
+        </div>
         <img
           class="old-paper-img"
           src="../assets/other-images/old-paper.png"

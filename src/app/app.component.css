@@ -14,6 +14,14 @@ header {
 .title {
   line-height: 1;
   margin-bottom: 0px;
+  margin-top: 5px;
+  font-size: clamp(18pt, 2.5vw, 21pt);
+}
+
+header h3 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: clamp(12pt, 2vw, 15pt);
 }
 
 .current-combo-attempt {
@@ -39,8 +47,7 @@ header {
 
 .music-div:hover {
   cursor: pointer;
-  border: rgb(230, 230, 230) 4px solid;
-  box-shadow: 0 0 16px rgb(230, 230, 230);
+  animation: buttonFlash .3s 1 alternate;
 }
 
 .music-note-img {
@@ -131,16 +138,66 @@ button:focus {
   align-items: center;
   justify-content: center;
   color: green;
-  font-size: clamp(6vw, 6vw, 4vw);
+  font-size: clamp(18pt, 5vw, 4vw);
 }
 
 .paper-container {
   width: clamp(100%, 90%, 80%);
   height: auto;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
 .old-paper-img {
   width: 100%;
   height: auto;
+}
+
+.alienese-div {
+  width: 80%;
+  height: 85%;
+  position: absolute;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 14.3% 14.3% 14.3% 14.3% 14.3% 14.3% 14.3%;
+}
+
+.alienese-div p {
+  margin: 0px;
+  font-size: 60%;
+}
+
+.alienese-letter {
+  width: 40%;
+  height: auto;
+  align-self: center;
+}
+
+.letter-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+@keyframes buttonFlash {
+  0% {
+    border: red 4px solid;
+    box-shadow: 0 0 16px red;
+  }
+  100% {
+    border: rgb(230, 230, 230) 4px solid;
+    box-shadow: 0 0 16px rgb(230, 230, 230);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .music-div:hover {
+    border: rgb(230, 230, 230) 4px solid;
+    box-shadow: 0 0 16px rgb(230, 230, 230);
+  }
 }
