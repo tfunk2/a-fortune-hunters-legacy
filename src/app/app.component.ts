@@ -68,10 +68,32 @@ export class AppComponent {
     'z',
   ];
 
+  playButtonSound() {
+    let audio = new Audio();
+    audio.src = "../assets/sounds/buttonSound.mp3";
+    audio.load();
+    audio.play();
+  }
+
+  playUnlockSound() {
+    let audio = new Audio();
+    audio.src = "../assets/sounds/unlockSound.mp3";
+    audio.load();
+    audio.play();
+  }
+
+  playErrorSound() {
+    let audio = new Audio();
+    audio.src = "../assets/sounds/errorSound.mp3";
+    audio.load();
+    audio.play();
+  }
+
   addSymbolToCombo(num) {
     if (this.currentComboAttempt.length <= 3) {
       this.currentComboAttempt = [...this.currentComboAttempt, num];
     }
+    this.playButtonSound()
   }
 
   clearCombo() {
@@ -88,8 +110,10 @@ export class AppComponent {
       setTimeout(() => {
         this.isKeypadLocked = false;
       }, 2000);
+      this.playUnlockSound();
     } else {
       this.currentComboAttempt = [];
+      this.playErrorSound();
     }
   }
 
