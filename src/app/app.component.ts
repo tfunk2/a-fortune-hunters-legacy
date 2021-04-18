@@ -67,26 +67,30 @@ export class AppComponent {
     'y',
     'z',
   ];
+  buttonAudio = new Audio();
+  unlockAudio = new Audio();
+  errorAudio = new Audio();
+
+  constructor() {
+    this.buttonAudio.src = "../assets/sounds/buttonSound.mp3";
+    this.unlockAudio.src = "../assets/sounds/unlockSound.mp3";
+    this.errorAudio.src = "../assets/sounds/errorSound.mp3";
+
+    this.buttonAudio.load();
+    this.unlockAudio.load();
+    this.errorAudio.load();
+  }
 
   playButtonSound() {
-    let audio = new Audio();
-    audio.src = "../assets/sounds/buttonSound.mp3";
-    audio.load();
-    audio.play();
+    this.buttonAudio.play();
   }
 
   playUnlockSound() {
-    let audio = new Audio();
-    audio.src = "../assets/sounds/unlockSound.mp3";
-    audio.load();
-    audio.play();
+    this.unlockAudio.play();
   }
 
   playErrorSound() {
-    let audio = new Audio();
-    audio.src = "../assets/sounds/errorSound.mp3";
-    audio.load();
-    audio.play();
+    this.errorAudio.play();
   }
 
   addSymbolToCombo(num) {
