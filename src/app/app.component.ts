@@ -106,6 +106,7 @@ export class AppComponent {
 
   clearCombo() {
     this.currentComboAttempt = [];
+    this.playButtonSound()
   }
 
   submitCombo() {
