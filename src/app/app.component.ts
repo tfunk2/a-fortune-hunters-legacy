@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnChanges } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -79,6 +79,10 @@ export class AppComponent {
     this.buttonAudio.load();
     this.unlockAudio.load();
     this.errorAudio.load();
+  }
+
+  ngOnChanges() {
+    this.buttonAudio.load();
   }
 
   playButtonSound() {
