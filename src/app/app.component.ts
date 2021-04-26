@@ -5,7 +5,7 @@ import { Component, OnChanges } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent {
+export class AppComponent implements OnChanges {
   title: string = 'The Legacy Continues...';
   isKeypadLocked: boolean = true;
   isKeypadBeingUnlocked: boolean = false;
@@ -98,10 +98,10 @@ export class AppComponent {
   }
 
   addSymbolToCombo(num) {
+    this.playButtonSound()
     if (this.currentComboAttempt.length <= 3) {
       this.currentComboAttempt = [...this.currentComboAttempt, num];
     }
-    this.playButtonSound()
   }
 
   clearCombo() {

@@ -1,7 +1,7 @@
 <div class="app-container">
   <header>
     <h1 class="title">{{ title }}</h1>
-    <h3>
+    <h3 *ngIf="isKeypadLocked">
       You must be able to prove your musicality in order to be worthy of the
       inheritance I have in store for you.
     </h3>
