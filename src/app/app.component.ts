@@ -1,11 +1,11 @@
-import { Component, OnChanges } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent implements OnChanges {
+export class AppComponent {
   title: string = 'The Legacy Continues...';
   isKeypadLocked: boolean = true;
   isKeypadBeingUnlocked: boolean = false;
@@ -67,33 +67,22 @@ export class AppComponent implements OnChanges {
     'y',
     'z',
   ];
-  buttonAudio = new Audio();
-  unlockAudio = new Audio();
-  errorAudio = new Audio();
+  buttonAudio = new Audio("../assets/sounds/buttonSound.mp3");
+  unlockAudio = new Audio("../assets/sounds/unlockSound.mp3");
+  errorAudio = new Audio("../assets/sounds/errorSound.mp3");
 
-  constructor() {
-    this.buttonAudio.src = "../assets/sounds/buttonSound.mp3";
-    this.unlockAudio.src = "../assets/sounds/unlockSound.mp3";
-    this.errorAudio.src = "../assets/sounds/errorSound.mp3";
-
-    this.buttonAudio.load();
-    this.unlockAudio.load();
-    this.errorAudio.load();
-  }
-
-  ngOnChanges() {
-    this.buttonAudio.load();
-  }
-
-  playButtonSound() {
+  async playButtonSound() {
+    await this.buttonAudio.load();
     this.buttonAudio.play();
   }
 
-  playUnlockSound() {
+  async playUnlockSound() {
+    await this.unlockAudio.load();
     this.unlockAudio.play();
   }
 
-  playErrorSound() {
+  async playErrorSound() {
+    await this.errorAudio.load();
     this.errorAudio.play();
   }
 
