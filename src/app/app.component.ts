@@ -118,9 +118,9 @@ export class AppComponent {
   whichMusicNote(currentNum) {
     switch (currentNum) {
       case 1:
-        return '../assets/music-note-pngs/bass-clef.png';
-      case 2:
         return '../assets/music-note-pngs/beam.png';
+      case 2:
+        return '../assets/music-note-pngs/triplet.png';
       case 3:
         return '../assets/music-note-pngs/eighth-note.png';
       case 4:
@@ -134,7 +134,7 @@ export class AppComponent {
       case 8:
         return '../assets/music-note-pngs/tie.png';
       case 9:
-        return '../assets/music-note-pngs/triplet.png';
+        return '../assets/music-note-pngs/quarter-note.png';
       case 0:
         return '../assets/music-note-pngs/treble-clef.png';
     }

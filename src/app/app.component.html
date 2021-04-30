@@ -30,14 +30,14 @@
       <div (click)="addSymbolToCombo(1)" class="music-div">
         <img
           class="music-note-img"
-          src="../assets/music-note-pngs/bass-clef.png"
+          src="../assets/music-note-pngs/beam.png"
           alt="music-div"
         />
       </div>
       <div (click)="addSymbolToCombo(2)" class="music-div">
         <img
           class="music-note-img"
-          src="../assets/music-note-pngs/beam.png"
+          src="../assets/music-note-pngs/triplet.png"
           alt="music-div"
         />
       </div>
@@ -86,7 +86,7 @@
       <div (click)="addSymbolToCombo(9)" class="music-div">
         <img
           class="music-note-img"
-          src="../assets/music-note-pngs/triplet.png"
+          src="../assets/music-note-pngs/quarter-note.png"
           alt="music-div"
         />
       </div>
@@ -111,8 +111,15 @@
       I knew you were a natural!
       <div class="paper-container">
         <div class="alienese-div">
-          <div *ngFor="let alieneseImagePath of alieneseImagePaths" class="letter-div">
-            <img [src]="alieneseImagePath" alt="alien letter" class="alienese-letter">
+          <div
+            *ngFor="let alieneseImagePath of alieneseImagePaths"
+            class="letter-div"
+          >
+            <img
+              [src]="alieneseImagePath"
+              alt="alien letter"
+              class="alienese-letter"
+            />
             <p>= {{ whichLetter(alieneseImagePath).toUpperCase() }}</p>
           </div>
         </div>
